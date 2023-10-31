@@ -40,6 +40,11 @@ containers:
       - '5332:5432'
 
 tasks:
+  start-dev-db:
+    description: start development database
+    run:
+      container: db
+
   start-test-db:
     description: start test database
     run:

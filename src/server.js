@@ -1,3 +1,9 @@
+const path = require('path');
+
+console.log(require('dotenv').config());
+// this will add .env properties to process.env
+require('dotenv').config({ path: path.join(__dirname, '..', '.env')});
+
 const PORT = process.env.PORT || 5001;
 
 const server = require('./src/app')({});
